@@ -14,10 +14,20 @@ class PassengerTest {
     }
 
     @Test
-    void test_Title() {
+    void success_test_Title() {
         Passenger myPass = new Passenger("Mr", "Conor", 12345678910L, 879543461L, 21);
         assertEquals("Mr", myPass.getTitle());
     }
+
+
+    @Test
+    void test_fail_title_check() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger ("Miss","Conor",12345678910L,879543461L,21);});
+        assertEquals("Please enter Mr, Mrs or Ms", exMessage.getMessage());
+
+    }
+
+
 
     @AfterEach
     void tearDown() {

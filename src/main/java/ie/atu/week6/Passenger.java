@@ -9,7 +9,7 @@ public class Passenger {
     private int age;
 
     public Passenger(String title, String name, long id, long phoneNo, int age) {
-        this.Title = title;
+        setTitle(title);
         this.Name = name;
         this.id = id;
         this.phoneNo = phoneNo;
@@ -17,16 +17,14 @@ public class Passenger {
     }
 
     public void setTitle(String title) {
-        /*
-        if(title.equals("Mr") || title.equals("Mrs") || title.equals("Miss")) {
+
+        if(("Mr").equalsIgnoreCase(title) || ("Mrs").equalsIgnoreCase(title) || ("Ms").equalsIgnoreCase(title)) {
             Title = title;
         }
         else {
-            printf("Invalid entry");
+            throw new IllegalArgumentException("Please enter Mr, Mrs or Ms");
         }
 
-         */
-        Title = title;
     }
     public String getTitle() {
         return Title;
