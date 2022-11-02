@@ -1,7 +1,6 @@
 package ie.atu.week6;
 
 public class Passenger {
-
     private String Title;
     private String Name;
     private long id;
@@ -23,6 +22,17 @@ public class Passenger {
         }
         else {
             throw new IllegalArgumentException("Please enter Mr, Mrs or Ms");
+        }
+
+    }
+
+    public void setName(String name) {
+        int count = name.length();
+        if (count >= 3) {
+            Name = name;
+        }
+        else {
+            throw new IllegalArgumentException("Name must be greater than 3 characters long");
         }
 
     }
