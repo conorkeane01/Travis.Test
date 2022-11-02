@@ -39,4 +39,8 @@ public class Passenger {
     public String getTitle() {
         return Title;
     }
+
+    public String getName() {
+        return Name;
+    }
 }

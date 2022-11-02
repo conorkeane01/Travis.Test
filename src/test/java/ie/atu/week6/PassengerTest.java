@@ -27,6 +27,12 @@ class PassengerTest {
 
     }
 
+    @Test
+    void test_success_name_check() {
+        Passenger myPass = new Passenger("Mr", "Conor", 12345678910L, 879543461L, 21);
+        assertEquals("Conor", myPass.getName());
+    }
+
 
 
     @AfterEach
