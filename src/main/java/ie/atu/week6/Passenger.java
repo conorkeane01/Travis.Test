@@ -1,7 +1,6 @@
 package ie.atu.week6;
 
 public class Passenger {
-
     private String Title;
     private String Name;
     private long id;
@@ -10,7 +9,7 @@ public class Passenger {
 
     public Passenger(String title, String name, long id, long phoneNo, int age) {
         setTitle(title);
-        this.Name = name;
+        setName(name);
         this.id = id;
         this.phoneNo = phoneNo;
         this.age = age;
@@ -26,7 +25,22 @@ public class Passenger {
         }
 
     }
+
+    public void setName(String name) {
+        int count = name.length();
+        if (count >= 3) {
+            Name = name;
+        }
+        else {
+            throw new IllegalArgumentException("Name must be greater than 3 characters long");
+        }
+
+    }
     public String getTitle() {
         return Title;
+    }
+
+    public String getName() {
+        return Name;
     }
 }
