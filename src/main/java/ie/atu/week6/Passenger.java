@@ -9,7 +9,7 @@ public class Passenger {
 
     public Passenger(String title, String name, long id, long phoneNo, int age) {
         setTitle(title);
-        this.Name = name;
+        setName(name);
         this.id = id;
         this.phoneNo = phoneNo;
         this.age = age;

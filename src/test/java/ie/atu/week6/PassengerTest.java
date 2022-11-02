@@ -33,6 +33,12 @@ class PassengerTest {
         assertEquals("Conor", myPass.getName());
     }
 
+    @Test
+    void test_fail_name() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger ("Mr","Oj",12345678910L,879543461L,21);});
+        assertEquals("Name must be greater than 3 characters long", exMessage.getMessage());
+    }
+
 
 
     @AfterEach
