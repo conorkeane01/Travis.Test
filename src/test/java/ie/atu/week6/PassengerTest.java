@@ -63,6 +63,12 @@ class PassengerTest {
         assertEquals("Phone number must be greater than 6 characters long", exMessage.getMessage());
     }
 
+    @Test
+    void test_success_Age_check() {
+        Passenger myPass = new Passenger("Mr", "Conor",1111111111L,879543461L,21);
+        assertEquals(21, myPass.getAge());
+    }
+
 
 
 
