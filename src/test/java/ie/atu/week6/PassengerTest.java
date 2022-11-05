@@ -45,6 +45,13 @@ class PassengerTest {
         assertEquals(1111111111, myPass.getID());
     }
 
+    @Test
+    void test_fail_ID_check() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger ("Mr","Conor",1L,879543461L,21);});
+        assertEquals("ID must be greater than 10 characters long", exMessage.getMessage());
+    }
+
+
 
 
     @AfterEach
