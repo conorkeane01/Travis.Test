@@ -63,6 +63,19 @@ class PassengerTest {
         assertEquals("Phone number must be greater than 6 characters long", exMessage.getMessage());
     }
 
+    @Test
+    void test_success_Age_check() {
+        Passenger myPass = new Passenger("Mr", "Conor",1111111111L,879543461L,21);
+        assertEquals(21, myPass.getAge());
+    }
+
+    @Test
+    void test_fail_Age_check() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger ("Mr","Conor",1111111111L,879543461L,15);});
+        assertEquals("You must be over the age of 16 to fly", exMessage.getMessage());
+    }
+
+
 
 
 

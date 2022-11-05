@@ -12,7 +12,7 @@ public class Passenger {
         setName(name);
         setID(id);
         setPhoneNo(phoneNo);
-        //this.age = age;
+        setAge(age);
     }
 
     public void setTitle(String title) {
@@ -56,6 +56,16 @@ public class Passenger {
         }
 
     }
+
+    public void setAge(int age) {
+        if (age > 16) {
+            Age = age;
+        }
+        else {
+            throw new IllegalArgumentException("You must be over the age of 16 to fly");
+        }
+
+    }
     public String getTitle() {
         return Title;
     }
@@ -70,5 +80,9 @@ public class Passenger {
 
     public long getPhoneNo() {
         return PhoneNo;
+    }
+
+    public int getAge() {
+        return Age;
     }
 }
