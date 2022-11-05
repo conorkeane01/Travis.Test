@@ -48,7 +48,7 @@ public class Passenger {
     }
 
     public void setPhoneNo(long phoneNo) {
-        if (phoneNo >= 7) {
+        if (phoneNo > 6) {
             PhoneNo = phoneNo;
         }
         else {

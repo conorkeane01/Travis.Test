@@ -57,6 +57,14 @@ class PassengerTest {
         assertEquals(879543461, myPass.getPhoneNo());
     }
 
+    @Test
+    void test_fail_Phone_check() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger ("Mr","Conor",1111111111L,1L,21);});
+        assertEquals("Phone number must be greater than 6 characters long", exMessage.getMessage());
+    }
+
+
+
 
 
 
