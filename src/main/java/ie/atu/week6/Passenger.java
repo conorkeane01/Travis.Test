@@ -3,11 +3,11 @@ package ie.atu.week6;
 public class Passenger {
     private String Title;
     private String Name;
-    private long ID;
+    private String ID;
     private long PhoneNo;
     private int Age;
 
-    public Passenger(String title, String name, long id, long phoneNo, int age) {
+    public Passenger(String title, String name, String id, long phoneNo, int age) {
         setTitle(title);
         setName(name);
         setID(id);
@@ -37,8 +37,9 @@ public class Passenger {
 
     }
 
-    public void setID(long id) {
-        if (id >= 10) {
+    public void setID(String id) {
+        int count = id.length();
+        if (count >= 10) {
             ID = id;
         }
         else {
@@ -74,7 +75,7 @@ public class Passenger {
         return Name;
     }
 
-    public long getID() {
+    public String getID() {
         return ID;
     }
 
