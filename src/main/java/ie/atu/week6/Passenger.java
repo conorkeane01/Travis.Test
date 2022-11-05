@@ -11,7 +11,7 @@ public class Passenger {
         setTitle(title);
         setName(name);
         setID(id);
-        //this.phoneNo = phoneNo;
+        setPhoneNo(phoneNo);
         //this.age = age;
     }
 
@@ -46,6 +46,16 @@ public class Passenger {
         }
 
     }
+
+    public void setPhoneNo(long phoneNo) {
+        if (phoneNo >= 7) {
+            PhoneNo = phoneNo;
+        }
+        else {
+            throw new IllegalArgumentException("Phone number must be greater than 6 characters long");
+        }
+
+    }
     public String getTitle() {
         return Title;
     }
@@ -56,5 +66,9 @@ public class Passenger {
 
     public long getID() {
         return ID;
+    }
+
+    public long getPhoneNo() {
+        return PhoneNo;
     }
 }
