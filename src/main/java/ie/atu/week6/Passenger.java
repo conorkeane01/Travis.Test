@@ -4,10 +4,10 @@ public class Passenger {
     private String Title;
     private String Name;
     private String ID;
-    private long PhoneNo;
+    private String PhoneNo;
     private int Age;
 
-    public Passenger(String title, String name, String id, long phoneNo, int age) {
+    public Passenger(String title, String name, String id, String phoneNo, int age) {
         setTitle(title);
         setName(name);
         setID(id);
@@ -48,8 +48,9 @@ public class Passenger {
 
     }
 
-    public void setPhoneNo(long phoneNo) {
-        if (phoneNo > 6) {
+    public void setPhoneNo(String phoneNo) {
+        int count = phoneNo.length();
+        if (count > 6) {
             PhoneNo = phoneNo;
         }
         else {
@@ -79,7 +80,7 @@ public class Passenger {
         return ID;
     }
 
-    public long getPhoneNo() {
+    public String getPhoneNo() {
         return PhoneNo;
     }
 
