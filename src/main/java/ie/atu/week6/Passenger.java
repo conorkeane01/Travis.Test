@@ -3,16 +3,16 @@ package ie.atu.week6;
 public class Passenger {
     private String Title;
     private String Name;
-    private long id;
-    private long phoneNo;
-    private int age;
+    private long ID;
+    private long PhoneNo;
+    private int Age;
 
     public Passenger(String title, String name, long id, long phoneNo, int age) {
         setTitle(title);
         setName(name);
-        this.id = id;
-        this.phoneNo = phoneNo;
-        this.age = age;
+        setID(id);
+        //this.phoneNo = phoneNo;
+        //this.age = age;
     }
 
     public void setTitle(String title) {
@@ -36,11 +36,25 @@ public class Passenger {
         }
 
     }
+
+    public void setID(long id) {
+        if (id >= 10) {
+            ID = id;
+        }
+        else {
+            throw new IllegalArgumentException("ID must be greater than 10 characters long");
+        }
+
+    }
     public String getTitle() {
         return Title;
     }
 
     public String getName() {
         return Name;
+    }
+
+    public long getID() {
+        return ID;
     }
 }
