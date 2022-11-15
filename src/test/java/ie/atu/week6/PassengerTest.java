@@ -27,7 +27,7 @@ class PassengerTest {
 
     @Test
     void success_test_Title_Ms() {
-        Passenger myPass = new Passenger("Ms", "Conor", "1111111111", "879543461", 21);
+        Passenger myPass = new Passenger("Miss", "Conor", "1111111111", "879543461", 21);
         assertEquals("Ms", myPass.getTitle());
     }
 
