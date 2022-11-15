@@ -35,7 +35,7 @@ class PassengerTest {
 
     @Test
     void test_fail_title_check() {
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger ("Miss","Conor","1111111111","879543461",21);});
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger ("Mr","Conor","1111111111","879543461",21);});
         assertEquals("Please enter Mr, Mrs or Ms", exMessage.getMessage());
 
     }
